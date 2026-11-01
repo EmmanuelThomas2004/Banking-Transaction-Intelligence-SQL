@@ -1,0 +1,22 @@
+SELECT COUNT(*) AS total_users FROM users;
+
+SELECT COUNT(*) AS total_cards FROM cards;
+
+SELECT COUNT(*) AS total_transactions FROM transactions;
+
+SELECT COUNT(*) AS total_credit_cards FROM cards WHERE card_type = 'Credit';
+
+SELECT COUNT(*) AS total_debit_cards FROM cards WHERE card_type = 'Debit';
+
+SELECT card_type, COUNT(*) AS total_cards
+FROM cards
+GROUP BY card_type;
+
+SELECT COUNT(DISTINCT card_type) AS unique_card_types
+FROM cards;
+
+SELECT * FROM users LIMIT 10;
+
+SELECT * FROM cards LIMIT 10;
+
+SELECT * FROM transactions LIMIT 10;
